@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Table and Fixed Div</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            margin: 50px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        /* Alternate row colors */
+        tr:nth-child(even) td {
+            background-color: yellow;
+        }
+
+        tr:nth-child(odd):not(:first-child) td {
+            background-color: lightgray;
+        }
+
+        /* Fixed div */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 180px;
+            padding: 15px;
+            border: 4px solid green;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <!-- Fixed Div -->
+    <div class="fixed-box">
+        This div element has<br>
+        position: fixed;
+    </div>
+
+</body>
+</html>
